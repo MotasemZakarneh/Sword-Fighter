@@ -5,6 +5,6 @@ func _ready():
 	pass
 
 func _on_zero_hp():
-	get_parent().get_node("Camera").shake()
+	Global.main_cam.shake()
 	queue_free()
 	pass

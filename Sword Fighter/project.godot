@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area",
 "class": "Weapon",
 "language": "GDScript",
-"path": "res://Weapon.gd"
+"path": "res://Scripts/Weapons/Weapon.gd"
 } ]
 _global_script_class_icons={
 "Weapon": ""
@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Sword Fighter"
-run/main_scene="res://Level.tscn"
+run/main_scene="res://Scenes/Levels/Level.tscn"
 config/icon="res://Art/icon.png"
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [display]
 

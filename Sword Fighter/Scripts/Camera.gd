@@ -8,11 +8,17 @@ var start_v
 var shaking = false
 
 func _ready():
+	connect("tree_exiting",self,"_on_out_of_scene")
+	Global.main_cam = self
 	start_h = h_offset
 	start_v = v_offset
 	
 	$Timer.one_shot = true
 	$Timer.connect("timeout",self,"_on_finished_shaking")
+	pass
+
+func _on_out_of_scene():
+	Global.main_cam = null
 	pass
 
 func shake(magnitude=self.magnitude,duration=self.duration,shake_h=true,shake_v=true):

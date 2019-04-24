@@ -1,6 +1,8 @@
 extends Weapon
 
 export (NodePath) var follow_target_path
+export var left_turn_max = -90
+export var right_turn_max = 90
 export var left_turn_speed = 360
 export var right_turn_speed = -360
 
