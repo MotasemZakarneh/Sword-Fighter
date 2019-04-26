@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=1]
+[ext_resource path="res://Shaker.gd" type="Script" id=2]
+
+[node name="Camera" type="Camera"]
+transform = Transform( -1, 1.4189e-07, -5.16437e-08, -2.26405e-08, 0.197255, 0.980352, 1.49289e-07, 0.980352, -0.197255, -2.44787e-08, 11.5779, -2.68966 )
+current = true
+script = ExtResource( 1 )
+follow_target_path = NodePath("../Player")
+
+[node name="Shaker" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Shaker"]
+

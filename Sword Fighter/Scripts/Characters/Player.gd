@@ -4,9 +4,18 @@ export (NodePath) var cam_path
 var dir = Vector3(0,0,0)
 var camera = null
 
+func get_body_position():
+	return $"Player Body".global_transform.origin
+
 func _ready():
 	camera = get_node(cam_path)
 	$"Player Sword".connect("on_dealt_damage",self,"_on_damage_dealt")
+	connect("tree_exiting",self,"_on_leaving_tree")
+	Global.player = self
+	pass
+
+func _on_leaving_tree():
+	Global.player = null
 	pass
 
 func _on_damage_dealt():
